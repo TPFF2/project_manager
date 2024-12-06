@@ -12,8 +12,11 @@
         "laravel/framework": "^10.10",
         "laravel/prompts": "*",
         "laravel/sanctum": "^3.3",
+        "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.8",
+        "livewire/livewire": "^3.5",
         "salahhusa9/laravel-updater": "^1.0",
+        "socialiteproviders/discord": "^4.2",
         "vstudio/versionbuildaction": "^1.1"
     },
     "require-dev": {

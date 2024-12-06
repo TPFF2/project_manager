@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('auth')->group(function () {
+    Route::get('/login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login');
+    Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
+    Route::get('{provider}/redirect', [\App\Http\Controllers\AuthController::class, 'redirect'])->name('auth.redirect');
+    Route::get('{provider}/callback', [\App\Http\Controllers\AuthController::class, 'callback'])->name('auth.callback');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', \App\Livewire\Dashboard::class)->name('dashboard');
 });
