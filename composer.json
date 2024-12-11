@@ -17,6 +17,7 @@
         "livewire/livewire": "^3.5",
         "salahhusa9/laravel-updater": "^1.0",
         "socialiteproviders/discord": "^4.2",
+        "team-reflex/discord-php": "^10.1",
         "vstudio/versionbuildaction": "^1.1"
     },
     "require-dev": {

@@ -61,6 +61,11 @@
                         <!--begin::Heading-->
                         <!--begin::Login options-->
                         <div class="row g-3 mb-9">
+                            @if($error)
+                                <div class="col">
+                                    <p class="text-danger fw-bold fs-2">{{ $error }}</p>
+                                </div>
+                            @endif
                             <!--begin::Col-->
                             <div class="col">
                                 <!--begin::Google link=-->

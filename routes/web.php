@@ -22,4 +22,5 @@ Route::prefix('auth')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', \App\Livewire\Dashboard::class)->name('dashboard');
+    Route::get('profil', \App\Livewire\Profil::class)->name('profil');
 });
